@@ -1,0 +1,16 @@
+import { MENU } from './ui/menu';
+import { MenuBar } from './ui/MenuBar';
+
+export function Header() {
+  return (
+    <aside className="fixed top-0 right-0 p-4 z-10">
+      <ul className="flex items-center gap-5 border border-gray-600 rounded-full p-2">
+        {MENU.map((menuBar) => (
+          <li key={menuBar.href}>
+            <MenuBar menuBar={menuBar} />
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
